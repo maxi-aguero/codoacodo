@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mi-sitio-web
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_SKIP_PLATFORM_CHECK
+        value: "1"
