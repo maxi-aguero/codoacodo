@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+</head>
+<body>
+    <h1 id="mensaje"></h1>
+    <script>
+        // Obtener el mensaje desde el servidor
+        fetch('/mensaje')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('mensaje').textContent = data.mensaje;
+            });
+    </script>
+</body>
+</html>
